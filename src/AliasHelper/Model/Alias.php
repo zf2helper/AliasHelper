@@ -1,5 +1,5 @@
 <?php
-namespace Aliashelper\Model;
+namespace AliasHelper\Model;
 
 class Alias
 {
@@ -13,9 +13,9 @@ class Alias
         $class = get_class($entity);
         if ($field) {
             $function = 'get'.ucfirst($field);
-            $aliasName = $name = \Aliashelper\Services\Alias::stringToAlias($entity->$function());
+            $aliasName = $name = \AliasHelper\Services\Alias::stringToAlias($entity->$function());
         } else {
-            $aliasName = $name = \Aliashelper\Services\Alias::stringToAlias($entity->getTitle());
+            $aliasName = $name = \AliasHelper\Services\Alias::stringToAlias($entity->getTitle());
         }
         $i = 0;
         while (true) {

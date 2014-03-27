@@ -1,5 +1,5 @@
 <?php
-namespace Aliashelper;
+namespace AliasHelper;
 
 class Module
 {

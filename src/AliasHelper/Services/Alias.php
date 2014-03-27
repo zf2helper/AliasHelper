@@ -1,8 +1,24 @@
 <?php
-namespace Aliashelper\Services;
+namespace AliasHelper\Services;
 
 final class Alias
 {
+    static function stringToAlias($string)
+    {
+        $alias = trim(strtolower($string));
+        $alias = str_replace("'", "", $alias);
+        $alias = str_replace(",", "", $alias);
+        $alias = strtr($alias, static::$charSet);
+        $alias = str_replace("`", "", $alias);
+        $alias = str_replace(" ", "-", $alias);
+        $alias = str_replace('&', '-and-', $alias);
+        $alias = str_replace('--', '-', $alias);
+        $alias = preg_replace('![^\w\d\s-]*!', '', $alias);
+        $alias = urlencode($alias);
+
+        return $alias;
+    }    
+    
     static $charSet = array(
         '¡' => 'i',
         'A' => 'a',
@@ -379,21 +395,5 @@ final class Alias
         'Я' => 'ya',
         'я' => 'ya',
     );
-
-    static function stringToAlias($string)
-    {
-        $alias = trim(strtolower($string));
-        $alias = str_replace("'", "", $alias);
-        $alias = str_replace(",", "", $alias);
-        $alias = strtr($alias, static::$charSet);
-        $alias = str_replace("`", "", $alias);
-        $alias = str_replace(" ", "-", $alias);
-        $alias = str_replace('&', '-and-', $alias);
-        $alias = str_replace('--', '-', $alias);
-        $alias = preg_replace('![^\w\d\s-]*!', '', $alias);
-        $alias = urlencode($alias);
-
-        return $alias;
-    }
 
 }

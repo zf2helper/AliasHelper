@@ -4,7 +4,7 @@ return array(
         'factories' => array(
             'AliasHelper' => function($serviceManager) {
             $em = $serviceManager->get('doctrine.entitymanager.orm_default');
-            $model = new Alias\Model\Alias($em);
+            $model = new AliasHelper\Model\Alias($em);
             
             return $model;
         }
