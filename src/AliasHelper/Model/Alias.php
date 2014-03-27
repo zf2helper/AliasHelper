@@ -8,7 +8,7 @@ class Alias
         $this->em = $em;
     }
     
-    public function setAlias($entity, $field = null)
+    public function getAlias($entity, $field = null)
     {
         $class = get_class($entity);
         if ($field) {
