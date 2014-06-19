@@ -1,5 +1,5 @@
 {
-    "name": "mblxa/AliasHelper",
+    "name": "mblxa/aliashelper",
     "version": "0.0.1",
     "reference":"master",
     "type": "zf-module",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-0": {
-            "mblxa": "src/"
+            "zf2helper": "src/"
         },
         "classmap": [
             "./Module.php"
