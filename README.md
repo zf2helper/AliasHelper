@@ -1,10 +1,7 @@
 AliasHelper
 ===========
 
-Helps create aliases for entities
-
-
-# Simple module that creates alias from any text field of the entity. #
+ Simple module that creates alias from any text field of the entity.
 
 **How does it work:**
 
