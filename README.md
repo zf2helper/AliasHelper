@@ -8,7 +8,7 @@ AliasHelper
 1. Gets from entity field to create alias (title by default).
 2. Convert field to url friendly alias.
 3. Searchs entity repository for this alias.
-4. Adds "-@number@" if such alias exists.
+4. Adds "-number" if such alias exists.
 
 
 **Usage**:
