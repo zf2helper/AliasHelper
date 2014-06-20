@@ -19,8 +19,8 @@ AliasHelper
 
 $entity = new Entity();
 $aliasModel = $this->getServiceLocator()->get('AliasHelper');
-
-$alias = $aliasModel->getAlias($entity, $field) //$field - entity field that must be converted to alias, title by default
+//$field - entity field that must be converted to alias, title by default
+$alias = $aliasModel->getAlias($entity, $field)
 
 $entity->setAlias($alias);
 ```
